@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -175,21 +176,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void playerOneResult(){
-        String TAG = "Player1";
-        //player 1 wins
-        Log.e(TAG, "WON");
+        Toast.makeText(getApplicationContext(),"Player 1 won",Toast.LENGTH_SHORT).show();
         winStatus=true;
     }
 
     public void playerTwoResult(){
-        String TAG = "Player2";
-        //player 2 wins
-        Log.e(TAG, "WON");
+        Toast.makeText(getApplicationContext(),"Player 2 won",Toast.LENGTH_SHORT).show();
         winStatus=true;
     }
 
     public void Draw(){
-        Log.e("MATCH", "DRAW");
+        Toast.makeText(getApplicationContext(),"Match Draw",Toast.LENGTH_SHORT).show();
     }
 
     @Override
